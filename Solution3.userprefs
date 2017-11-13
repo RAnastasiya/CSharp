@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Solution3/Program.cs">
+    <Files>
+      <File FileName="Solution3/Program.cs" Line="11" Column="42" />
+      <File FileName="Solution3/Shelter.cs" Line="33" Column="5" />
+      <File FileName="Solution3/Dog.cs" Line="7" Column="43" />
+      <File FileName="Solution3/Body.cs" Line="11" Column="2" />
+      <File FileName="Solution3/Cat.cs" Line="13" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
