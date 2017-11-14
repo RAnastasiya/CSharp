@@ -27,9 +27,9 @@ namespace Solution3
 		}
 
 		public Shelter(){
-			Console.WriteLine ("Enter the number of dog admitted to the shelter");
+			Console.WriteLine ("Enter free places for dogs");
 			countDog = EnterAnim ("Dog");
-			Console.WriteLine ("Enter the number of cat admitted to the shelter");
+			Console.WriteLine ("Enter free places for cats");
 			countCat = EnterAnim ("Cat");
 		}
 		private static int EnterAnim(string an){
@@ -49,19 +49,28 @@ namespace Solution3
 			string readLine;
 			Console.WriteLine ("Dog - " + countDog + "  Cat - " + countCat);
 			if (countDog == 0) {
-				Console.WriteLine ("cat?");
-				readLine = "cat";
+				readLine = AnswerToQuestion("cat");
 			} else if (countCat == 0) {
-				Console.WriteLine ("dog?");
-				readLine = "dog";
+				readLine = AnswerToQuestion("dog");
 			} else {
-				Console.WriteLine ("dog or cat?");
+				Console.WriteLine ("Enter the animal you want to record: dog or cat");
 				readLine = Console.ReadLine ();
 			}
 			if (readLine == "dog")
 				countDog -= 1;
-			else
+			else if (readLine == "cat")
 				countCat -= 1;
+			return readLine;
+		}
+		private static string AnswerToQuestion(string an){
+			string readLine;
+			Console.WriteLine ("Only places left for cats.\n Do you want to add a {0} to the shelter: yes or not", an);
+			string answer = Console.ReadLine ();
+			if (answer == "yes") {
+				readLine = an;
+			} else {
+				readLine = "not";
+			}
 			return readLine;
 		}
 	}
