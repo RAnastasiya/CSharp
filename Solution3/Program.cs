@@ -9,7 +9,7 @@ namespace Solution3
 		{			
 			Shelter shelter = new Shelter ();
 			Body[] body = new Body[shelter.CountDog + shelter.CountCat];
-			for (int i = 0; i < (shelter.CountDog + shelter.CountCat); i++) {
+			for (int i = 0; i <= (shelter.CountDog + shelter.CountCat); i++) {
 				string readLine = shelter.Choice ();
 				if (readLine.ToLower() == "dog"){
 					Dog dog = new Dog ();

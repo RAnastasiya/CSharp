@@ -64,7 +64,7 @@ namespace Solution3
 		}
 		private static string AnswerToQuestion(string an){
 			string readLine;
-			Console.WriteLine ("Only places left for cats.\n Do you want to add a {0} to the shelter: yes or not", an);
+			Console.WriteLine ("Only places left for {0}s.\n Do you want to add a {0} to the shelter: yes or not", an);
 			string answer = Console.ReadLine ();
 			if (answer == "yes") {
 				readLine = an;
