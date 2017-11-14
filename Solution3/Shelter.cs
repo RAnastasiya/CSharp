@@ -45,5 +45,24 @@ namespace Solution3
 			}
 			return count;
 		}
+		public string Choice(){
+			string readLine;
+			Console.WriteLine ("Dog - " + countDog + "  Cat - " + countCat);
+			if (countDog == 0) {
+				Console.WriteLine ("cat?");
+				readLine = "cat";
+			} else if (countCat == 0) {
+				Console.WriteLine ("dog?");
+				readLine = "dog";
+			} else {
+				Console.WriteLine ("dog or cat?");
+				readLine = Console.ReadLine ();
+			}
+			if (readLine == "dog")
+				countDog -= 1;
+			else
+				countCat -= 1;
+			return readLine;
+		}
 	}
 }

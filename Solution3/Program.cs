@@ -10,14 +10,10 @@ namespace Solution3
 			Shelter shelter = new Shelter ();
 			Dog[] dog = new Dog[shelter.CountDog];
 			Cat[] cat = new Cat[shelter.CountCat];
-			int c = shelter.CountDog + shelter.CountCat;
-			Console.WriteLine ("dog + cat = " + c);
-			for (int i = 0; i < c; i++) {
-				Console.WriteLine ("dog or cat?");
-				string readLine = Console.ReadLine();
+			for (int i = 0; i < (shelter.CountDog + shelter.CountCat); i++) {
+				string readLine = shelter.Choice ();
 				if (readLine.ToLower() == "dog"){
 					dog [i] = new Dog ();
-					dog [i].count = shelter.CountDog;
 					dog [i].Id = i;
 
 					ConsoleKeyInfo keypress;
@@ -26,24 +22,32 @@ namespace Solution3
 					keypress = Console.ReadKey();
 					if ((ConsoleModifiers.Shift & keypress.Modifiers) != 0){
 						for (int j = 0; j <= i; j++) {
-							dog [j].Print ();
+							try{
+								dog [j].Print ();
+							} catch (Exception) {
+								continue;
+							}
 						}
 					}
-					Console.WriteLine ("Enter gender: 'man' or 'woman'");
+					Console.WriteLine ("Enter gender: male or female");
 					while (true) {
 						readLine = (Console.ReadLine ()).ToLower ();
-						if ((readLine == "man" || readLine == "woman")) {
+						if ((readLine == "male" || readLine == "female")) {
 							dog [i].Sex = readLine;
 							break;
 						} else {
-							Console.WriteLine ("Enter valide : 'man' or 'woman'");
+							Console.WriteLine ("Enter valide : male or female");
 							continue;
 						}
 					}
 					keypress = Console.ReadKey();
 					if ((ConsoleModifiers.Shift & keypress.Modifiers) != 0){
 						for (int j = 0; j <= i; j++) {
-							dog [j].Print ();
+							try{
+								dog [j].Print ();
+							} catch (Exception) {
+								continue;
+							}
 						}
 					}
 					Console.WriteLine ("Do you have documents confirming this identity? 'y' or 'n'");
@@ -62,7 +66,11 @@ namespace Solution3
 					keypress = Console.ReadKey();
 					if ((ConsoleModifiers.Shift & keypress.Modifiers) != 0){
 						for (int j = 0; j <= i; j++) {
-							dog [j].Print ();
+							try{
+								dog [j].Print ();
+							} catch (Exception) {
+								continue;
+							}
 						}
 					}
 					Console.WriteLine ("Enter age ");
@@ -77,13 +85,17 @@ namespace Solution3
 					keypress = Console.ReadKey();
 					if ((ConsoleModifiers.Shift & keypress.Modifiers) != 0){
 						for (int j = 0; j <= i; j++) {
-							dog [j].Print ();
+							try{
+								dog [j].Print ();
+							} catch (Exception) {
+								continue;
+							}
 						}
 					}
 					continue;
 				}else if(readLine.ToLower() == "cat"){
 					cat [i] = new Cat ();
-					Console.WriteLine ("cat   cat   cat   cat");
+					Console.WriteLine ("Caaaaaaaaaaat");
 					continue;
 				}else{
 					Console.WriteLine ("Enter valide gender: dog or cat");
