@@ -1,0 +1,5 @@
+/home/nastya/Documents/ProjectCSharp/CSharp/Solution3/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/nastya/Documents/ProjectCSharp/CSharp/Solution3/bin/Debug/Solution3.exe.mdb
+/home/nastya/Documents/ProjectCSharp/CSharp/Solution3/bin/Debug/Solution3.exe
+/home/nastya/Documents/ProjectCSharp/CSharp/Solution3/obj/x86/Debug/Solution3.exe
+/home/nastya/Documents/ProjectCSharp/CSharp/Solution3/obj/x86/Debug/Solution3.exe.mdb
